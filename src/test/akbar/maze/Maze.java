@@ -25,7 +25,7 @@ public class Maze {
             //Traversed Nodes
             maze_formatted[solver.getX()][solver.getY()] = 'T';
 
-            //print_formatted_maze();
+            print_formatted_maze();
 
             //Up
             int move = solver.getX() - 1;
@@ -53,6 +53,7 @@ public class Maze {
             if (down == 0 || down == 'E') {
                 node = mazeSolver(new Coordinate(move, solver.getY()));
                 maze_formatted[move][solver.getY()] = node;
+                print_formatted_maze();
                 if (node == 'X') {
                     return 'X';
                 }
@@ -68,6 +69,7 @@ public class Maze {
             if (right == 0 || right == 'E') {
                 node = mazeSolver(new Coordinate(solver.getX(), move));
                 maze_formatted[solver.getX()][move] = node;
+                print_formatted_maze();
                 if (node == 'X') {
                     return 'X';
                 }
