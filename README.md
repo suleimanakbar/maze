@@ -1,4 +1,3 @@
-# maze
-Maze
+# Maze
 
 DFS maze solver with attached samples
